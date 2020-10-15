@@ -1,12 +1,12 @@
 import { Box, Text } from 'grommet';
 import React from 'react';
 
-const Studies = () => {
+const Projects = () => {
     return (
         <Box>
-            <Text>Studies</Text>
+            <Text>Projet</Text>
         </Box>
     )
 }
 
-export default Studies
+export default Projects

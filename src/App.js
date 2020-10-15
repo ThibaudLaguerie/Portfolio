@@ -1,4 +1,4 @@
-import { Anchor, Button, Footer, Grommet, Header, Main, Menu, Text } from 'grommet';
+import { Anchor, Button, Footer, Grommet, Header, Image, Main, Menu, Text } from 'grommet';
 import React from 'react';
 import HomeScreen from './screens/Home/HomeScreen';
 

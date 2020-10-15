@@ -1,4 +1,5 @@
 import { Box, Card, CardBody, CardHeader, Text } from 'grommet';
+import { DownloadOption } from 'grommet-icons';
 import React from 'react';
 
 export default class Jobs extends React.Component {
@@ -6,7 +7,7 @@ export default class Jobs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            maxToDisplay: 1,
         }
 
         this.jobs = [
@@ -51,25 +52,35 @@ export default class Jobs extends React.Component {
     }
 
     render() {
+        const { maxToDisplay } = this.state
         return (
             <Box>
                 {
-                    this.jobs.map((job) => {
+                    this.jobs.map((job, key) => {
                         return (
-                            <Card margin="small" key={job.nom} background={job.mainColor}>
-                                <CardHeader pad="medium">
-                                    <Text color={job.secondaryColor}>{job.nom}</Text>
-                                </CardHeader>
-                                <CardBody pad="medium" background={job.secondaryColor}>
-                                    <Text color={job.tertiaryColor}>{job.poste}</Text>
-                                    <Text color={job.tertiaryColor}>{job.raison}</Text>
-                                    <Text color={job.tertiaryColor}>{job.localisation}</Text>
-                                    <Text color={job.tertiaryColor}>{job.periode}</Text>
-                                </CardBody>
-                            </Card>
+                            <>
+                                {
+                                    key < maxToDisplay ?
+                                        <Card animation={"slideDown"} flex="grow" margin="small" key={job.nom} background={job.mainColor}>
+                                            <CardHeader margin="xsmall" pad="small">
+                                                <Text color={job.secondaryColor}>{job.nom}</Text>
+                                            </CardHeader>
+                                            <CardBody margin="small" pad="medium" background={job.secondaryColor}>
+                                                <Text color={job.tertiaryColor}>{job.poste}</Text>
+                                                <Text color={job.tertiaryColor}>{job.raison}</Text>
+                                                <Text color={job.tertiaryColor}>{job.localisation}</Text>
+                                                <Text color={job.tertiaryColor}>{job.periode}</Text>
+                                            </CardBody>
+                                        </Card>
+                                        : null
+                                }
+                            </>
                         )
                     })
                 }
+                <Box align="center">
+                    <DownloadOption size="large" onClick={() => this.setState({ maxToDisplay: maxToDisplay + 1 })} />
+                </Box>
             </Box >
         )
     }
