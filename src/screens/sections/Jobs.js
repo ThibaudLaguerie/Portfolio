@@ -61,7 +61,7 @@ export default class Jobs extends React.Component {
                             <>
                                 {
                                     key < maxToDisplay ?
-                                        <Card animation={"slideDown"} flex="grow" margin="small" key={job.nom} background={job.mainColor}>
+                                        <Card flex="grow" margin="small" key={job.nom} background={job.mainColor}>
                                             <CardHeader margin="xsmall" pad="small">
                                                 <Text color={job.secondaryColor}>{job.nom}</Text>
                                             </CardHeader>
