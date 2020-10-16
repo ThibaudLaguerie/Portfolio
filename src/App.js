@@ -1,5 +1,6 @@
 import { Anchor, Button, Footer, Grommet, Header, Image, Main, Menu, Text } from 'grommet';
 import React from 'react';
+import Router from './Routes';
 import HomeScreen from './screens/Home/HomeScreen';
 
 const theme = {
@@ -23,7 +24,7 @@ function App() {
   return (
     <Grommet theme={theme} full background={'container'}>
       <Main>
-        <HomeScreen />
+        <Router />
       </Main>
     </Grommet>
   );

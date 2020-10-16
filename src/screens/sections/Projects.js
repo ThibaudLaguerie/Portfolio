@@ -6,17 +6,17 @@ const Projects = () => {
 
     const projects = [
         {
-            nom: 'Ma solution logement',
+            nom: 'Ma solution logement 3.0',
             background: require('../../img/myheader.jpg'),
             languages: [
                 {
                     nom: 'React Native',
-                    icone: <Reactjs size="medium" />
+                    icone: require('../../img/react.png'),
                 },
                 {
                     nom: 'PHP',
-                    icone: require('../../img/PHP.png')
-                }
+                    icone: require('../../img/PHP.png'),
+                },
             ]
         },
         {
@@ -24,13 +24,13 @@ const Projects = () => {
             background: require('../../img/myheader.jpg'),
             languages: [
                 {
-                    nom: 'React Native',
-                    icone: <Reactjs size="medium" />
+                    nom: 'Android',
+                    icone: require('../../img/android.png'),
                 },
                 {
-                    nom: 'PHP',
-                    icone: require('../../img/PHP.png')
-                }
+                    nom: 'Kotlin',
+                    icone: require('../../img/kotlin.png'),
+                },
             ]
         },
         {
@@ -38,13 +38,23 @@ const Projects = () => {
             background: require('../../img/myheader.jpg'),
             languages: [
                 {
-                    nom: 'React Native',
-                    icone: <Reactjs size="medium" />
+                    nom: 'Flutter',
+                    icone: require('../../img/flutter-icon.png'),
+                },
+            ]
+        },
+        {
+            nom: 'Moviiies',
+            background: require('../../img/myheader.jpg'),
+            languages: [
+                {
+                    nom: 'Apple',
+                    icone: require('../../img/apple.png'),
                 },
                 {
-                    nom: 'PHP',
-                    icone: require('../../img/PHP.png')
-                }
+                    nom: 'Swift',
+                    icone: require('../../img/swift.png'),
+                },
             ]
         },
         {
@@ -52,65 +62,40 @@ const Projects = () => {
             background: require('../../img/myheader.jpg'),
             languages: [
                 {
-                    nom: 'React Native',
-                    icone: <Reactjs size="medium" />
+                    nom: 'Android',
+                    icone: require('../../img/android.png'),
                 },
                 {
-                    nom: 'PHP',
-                    icone: require('../../img/PHP.png')
-                }
+                    nom: 'Java',
+                    icone: require('../../img/java.png'),
+                },
             ]
         },
     ]
 
     return (
-        <Box fill overflow="hidden">
-            <Carousel fill>
-                {
-                    projects.map((project) => {
-                        return (
-                            <Box key={project.nom}>
-                                <Text>{project.nom}</Text>
-                                <Reactjs size="medium" />
-                                <Grid rows={['large',]}
-                                    columns={['small', "medium", "small"]}
-                                    gap="none"
-                                    areas={[
-                                        { name: 'right', start: [0, 0], end: [0, 0] },
-                                        { name: 'main', start: [1, 0], end: [1, 0] },
-                                        { name: 'left', start: [2, 0], end: [2, 0] },
-                                    ]}>
-                                    <Box fill gridArea="right">
-                                        {
-                                            project.languages.slice(0, project.languages.length / 2).map((language) => {
-                                                return (
-                                                    <Box fill key={language.nom}>
-                                                        <Image fit="contain" src={language.icone} />
-                                                    </Box>
-                                                )
-                                            })
-                                        }
-                                    </Box>
-                                    <Box gridArea="main">
-                                        <Image fit='contain' src={project.background} />
-                                    </Box>
-                                    <Box fill gridArea="left">
-                                        {
-                                            project.languages.slice(project.languages.length / 2).map((language) => {
-                                                return (
-                                                    <Box fill key={language.nom}>
-                                                        <Image fit="contain" src={language.icone} />
-                                                    </Box>
-                                                )
-                                            })
-                                        }
-                                    </Box>
-                                </Grid>
+        <Box fill>
+            {
+                projects.map((project) => {
+                    return (
+                        <Box flex="grow" key={project.nom} pad="small">
+                            <Text textAlign="center">{project.nom}</Text>
+
+                            <Box margin="none" direction="row">
+                                {
+                                    project.languages.map((language) => {
+                                        return (
+                                            <Box key={language.nom} fill pad="small" align="center">
+                                                <Image width="30%" height="30%" fit="contain" src={language.icone} />
+                                            </Box>
+                                        )
+                                    })
+                                }
                             </Box>
-                        )
-                    })
-                }
-            </Carousel>
+                        </Box>
+                    )
+                })
+            }
         </Box>
     )
 }

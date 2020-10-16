@@ -19,7 +19,7 @@ export default class HomeScreen extends React.Component {
         return (
             <Box fill pad="small">
                 <Grid rows={['small', 'medium']}
-                    columns={['medium', "large"]}
+                    columns={['medium', "flex"]}
                     gap="small"
                     areas={[
                         { name: 'nav', start: [0, 0], end: [0, 1] },

@@ -5,8 +5,8 @@ import React from 'react';
 export const Profile = () => {
     return (
         <Box >
-            <Card flex="shrink" margin="small" pad="small" background="#000" >
-                <CardBody align="center" pad="small" margin="small" background="#fff">
+            <Card flex="shrink" margin="small" pad="xxsmall" background="#000" >
+                <CardBody style={{ borderRadius: 5 }} align="center" pad="small" margin="small" background="#fff">
                     <Text>Thibaud Laguérie</Text>
                     <Text>Développeur d'applications mobiles</Text>
                     <Box>
