@@ -21,7 +21,7 @@ const Studies = () => {
                             <Text>DUT Informatique</Text>
                         </CardHeader>
                         <CardBody>
-                            <Box>
+                            <Box alignSelf="center">
                                 <Meter
                                     max={100}
                                     values={[{
@@ -36,6 +36,7 @@ const Studies = () => {
                                 />
                                 <Text color="quaternary">Completed</Text>
                             </Box>
+                            <Text>IUT de Blagnac (31)</Text>
                         </CardBody>
                     </Card>
                 </Box>
@@ -45,7 +46,7 @@ const Studies = () => {
                             <Text>LP DReAM</Text>
                         </CardHeader>
                         <CardBody>
-                            <Box>
+                            <Box alignSelf="center">
                                 <Meter
                                     max={100}
                                     values={[{
@@ -60,6 +61,7 @@ const Studies = () => {
                                 />
                                 <Text color="quaternary">Completed</Text>
                             </Box>
+                            <Text>IUT de Castres (81)</Text>
                         </CardBody>
                     </Card>
                 </Box>
@@ -69,19 +71,22 @@ const Studies = () => {
                             <Text>Mastère Ynov</Text>
                         </CardHeader>
                         <CardBody>
-                            <Meter
-                                max={100}
-                                values={[{
-                                    value: 1,
-                                    color: "quaternary",
-                                    label: '1',
-                                    onClick: () => { }
-                                }]}
-                                size="xsmall"
-                                thickness="small"
-                                type="circle"
-                            />
-                            <Text color="secondary">In progress</Text>
+                            <Box alignSelf="center">
+                                <Meter
+                                    max={100}
+                                    values={[{
+                                        value: 1,
+                                        color: "quaternary",
+                                        label: '1',
+                                        onClick: () => { }
+                                    }]}
+                                    size="xsmall"
+                                    thickness="small"
+                                    type="circle"
+                                />
+                                <Text color="secondary">In progress</Text>
+                            </Box>
+                            <Text>Ynov Campus de Toulouse (31)</Text>
                         </CardBody>
                     </Card>
                 </Box>
