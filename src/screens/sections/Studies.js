@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, CardHeader, Grid, Meter, Text } from 'grommet';
+import { Box, Card, CardBody, CardHeader, Grid, Image, Meter, Text } from 'grommet';
 import React from 'react';
 
 const Studies = () => {
@@ -16,11 +16,11 @@ const Studies = () => {
                 ]}
             >
                 <Box gridArea="left" fill>
-                    <Card align="center">
+                    <Card align="center" height="medium" >
                         <CardHeader>
                             <Text>DUT Informatique</Text>
                         </CardHeader>
-                        <CardBody>
+                        <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
                                     max={100}
@@ -36,16 +36,19 @@ const Studies = () => {
                                 />
                                 <Text color="quaternary">Completed</Text>
                             </Box>
-                            <Text>IUT de Blagnac (31)</Text>
+                            <Text alignSelf="center">IUT de Blagnac (31)</Text>
+                            <Box align="center">
+                                <Image src={require('../../img/Logo_IUT_Blagnac.png')} style={{ width: "50%" }} />
+                            </Box>
                         </CardBody>
                     </Card>
                 </Box>
                 <Box gridArea="center" fill>
-                    <Card align="center">
+                    <Card align="center" height="medium">
                         <CardHeader>
                             <Text>LP DReAM</Text>
                         </CardHeader>
-                        <CardBody>
+                        <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
                                     max={100}
@@ -61,16 +64,19 @@ const Studies = () => {
                                 />
                                 <Text color="quaternary">Completed</Text>
                             </Box>
-                            <Text>IUT de Castres (81)</Text>
+                            <Text alignSelf="center">IUT de Castres (81)</Text>
+                            <Box align="center">
+                                <Image src={require('../../img/lpdream.png')} style={{ width: "50%" }} />
+                            </Box>
                         </CardBody>
                     </Card>
                 </Box>
                 <Box gridArea="right" fill>
-                    <Card align="center">
+                    <Card align="center" height="medium" >
                         <CardHeader>
                             <Text>Mastère Ynov</Text>
                         </CardHeader>
-                        <CardBody>
+                        <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
                                     max={100}
@@ -86,36 +92,43 @@ const Studies = () => {
                                 />
                                 <Text color="secondary">In progress</Text>
                             </Box>
-                            <Text>Ynov Campus de Toulouse (31)</Text>
+                            <Text alignSelf="center">Ynov Campus de Toulouse (31)</Text>
+                            <Box align="center">
+                                <Image src={require('../../img/ynov-masteres.svg')} style={{ objectFit: 'contain' }} />
+                            </Box>
                         </CardBody>
                     </Card>
                 </Box>
             </Grid>
-            <Meter alignSelf="center" margin="medium"
-                values={[{
-                    value: 40,
-                    color: "brand",
-                    label: 'dut',
-                    onClick: () => { }
-                },
-                {
-                    value: 20,
-                    color: "secondary",
-                    label: 'lp',
-                    onClick: () => { }
-                },
-                {
-                    value: 1,
-                    color: "quaternary",
-                    label: 'ynov',
-                    onClick: () => { }
-                },
-                ]}
-                max={100}
-                size="large"
-                thickness="medium"
-                type="circle"
-            />
+            <Box fill align="center" justify="center" style={{ display: 'flex', flexDirection: 'row' }} >
+                <Text>Newbie</Text>
+                <Meter alignSelf="center" margin="medium"
+                    values={[{
+                        value: 2,
+                        color: "brand",
+                        label: 'dut',
+                        onClick: () => { }
+                    },
+                    {
+                        value: 1,
+                        color: "secondary",
+                        label: 'lp',
+                        onClick: () => { }
+                    },
+                    {
+                        value: 0.1,
+                        color: "quaternary",
+                        label: 'ynov',
+                        onClick: () => { }
+                    },
+                    ]}
+                    max={5}
+                    size="large"
+                    thickness="small"
+                    type="bar"
+                />
+                <Text>Expert en développement logiciel, mobile et IoT</Text>
+            </Box>
         </Box>
     )
 }

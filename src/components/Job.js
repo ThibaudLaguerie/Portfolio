@@ -8,7 +8,7 @@ const Job = (props) => {
 
     return (
         <Card flex="grow" margin="small" background={props.job.mainColor}>
-            <CardHeader margin="xsmall" pad="small" onClick={() => {
+            <CardHeader margin="xsmall" pad="small"  onClick={() => {
                 setOpen(!isOpen)
             }}>
                 <Text color={props.job.secondaryColor}>{props.job.nom}</Text>
@@ -20,17 +20,12 @@ const Job = (props) => {
                 }
             </CardHeader>
             <Collapsible key={props.job.nom} open={isOpen}>
-                <CardBody margin="small" pad="medium" background={props.job.secondaryColor}>
+                <CardBody style={{ borderRadius: 15}} margin="small" pad="medium" background={props.job.secondaryColor}>
                     <Text color={props.job.tertiaryColor}>{props.job.poste}</Text>
                     <Text color={props.job.tertiaryColor}>{props.job.raison}</Text>
                     <Text color={props.job.tertiaryColor}>{props.job.localisation}</Text>
                     <Text color={props.job.tertiaryColor}>{props.job.periode}</Text>
                 </CardBody>
-                <CardFooter>
-                    <Link to={"/" + props.job.nom}>
-                        <Text>voir plus</Text>
-                    </Link>
-                </CardFooter>
             </Collapsible>
         </Card>
     )

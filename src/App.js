@@ -1,7 +1,6 @@
-import { Anchor, Button, Footer, Grommet, Header, Image, Main, Menu, Text } from 'grommet';
+import { Grommet, Main, } from 'grommet';
 import React from 'react';
 import Router from './Routes';
-import HomeScreen from './screens/Home/HomeScreen';
 
 const theme = {
   global: {
