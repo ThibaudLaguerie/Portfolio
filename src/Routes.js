@@ -8,7 +8,7 @@ import Navigator from './screens/Navigator/Navigator'
 const Router = () => {
     return (
         <BrowserRouter>
-            <Nav direction="row" background="brand" pad="xsmall">
+            <Nav direction="row" background="navbar" pad="xsmall">
                 <Link to="/">
                     <Home size="large" color="#fff" />
                 </Link>

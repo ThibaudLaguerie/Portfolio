@@ -6,6 +6,7 @@ const theme = {
   global: {
     colors: {
       container: "#ffffff",
+      navbar: "#000",
       brand: "#8FBC8F",
       secondary: "#90EE90",
       tertiary: "#98FB98",

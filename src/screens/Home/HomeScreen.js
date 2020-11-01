@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Image, Tab, Tabs, Text } from 'grommet';
+import { Box, Tab, Tabs } from 'grommet';
 import React from 'react';
 import Hobbies from '../sections/Hobbies';
 import Jobs from '../sections/Jobs';
@@ -17,34 +17,26 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <Box fill pad="small">
-                <Grid rows={['small', 'medium']}
-                    columns={['medium', "flex"]}
-                    gap="small"
-                    areas={[
-                        { name: 'nav', start: [0, 0], end: [0, 1] },
-                        { name: 'main', start: [1, 0], end: [1, 1] },
-                    ]}>
-                    <Box gridArea="nav">
-                        <Profile />
-                    </Box>
-                    <Box fill gridArea="main">
-                        <Tabs>
-                            <Tab title={"Mes emplois"}>
-                                <Jobs />
-                            </Tab>
-                            <Tab title={"Mes projets"}>
-                                <Projects />
-                            </Tab>
-                            <Tab title={"Mes études"}>
-                                <Studies />
-                            </Tab>
-                            <Tab title={"Mes passions"}>
-                                <Hobbies />
-                            </Tab>
-                        </Tabs>
-                    </Box>
-                </Grid>
+            <Box fill pad="small" direction="row-responsive">
+                <Box>
+                    <Profile />
+                </Box>
+                <Box fill>
+                    <Tabs>
+                        <Tab title={"Mes emplois"}>
+                            <Jobs />
+                        </Tab>
+                        <Tab title={"Mes projets"}>
+                            <Projects />
+                        </Tab>
+                        <Tab title={"Mes études"}>
+                            <Studies />
+                        </Tab>
+                        <Tab title={"Mes passions"}>
+                            <Hobbies />
+                        </Tab>
+                    </Tabs>
+                </Box>
             </Box>
         )
     }

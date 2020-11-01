@@ -1,98 +1,70 @@
-import { Box, Carousel, Grid, Image, Text } from 'grommet';
-import { Reactjs } from 'grommet-icons';
 import React from 'react';
+import { Box, Card, Image, Text } from 'grommet';
+import { StatusUnknown } from 'grommet-icons';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
 
     const projects = [
         {
-            nom: 'Ma solution logement 3.0',
-            background: require('../../img/myheader.jpg'),
+            name: 'Ma solution logement 3.0',
+            background: require('../../img/tarnhabitat.jpg'),
+            icon: require('../../img/tarnhabitat_logo.png'),
             languages: [
                 {
-                    nom: 'React Native',
-                    icone: require('../../img/react.png'),
+                    name: 'React Native',
+                    icon: require('../../img/react.png'),
                 },
                 {
-                    nom: 'PHP',
-                    icone: require('../../img/PHP.png'),
+                    name: 'PHP',
+                    icon: require('../../img/PHP.png'),
                 },
             ]
         },
         {
-            nom: 'Pokedex',
-            background: require('../../img/myheader.jpg'),
+            name: 'Pokedex',
+            background: require('../../img/pokedex_kotlin.jpg'),
+            icon: require('../../img/pokedex_logo.png'),
             languages: [
                 {
-                    nom: 'Android',
-                    icone: require('../../img/android.png'),
+                    name: 'Android',
+                    icon: require('../../img/android.png'),
                 },
                 {
-                    nom: 'Kotlin',
-                    icone: require('../../img/kotlin.png'),
+                    name: 'Kotlin',
+                    icon: require('../../img/kotlin.png'),
                 },
             ]
         },
         {
-            nom: 'Stud\'eat',
-            background: require('../../img/myheader.jpg'),
+            name: 'Moviiies',
+            background: require('../../img/Moviiies.png'),
+            icon: require('../../img/moviiies_logo.png'),
             languages: [
                 {
-                    nom: 'Flutter',
-                    icone: require('../../img/flutter-icon.png'),
-                },
-            ]
-        },
-        {
-            nom: 'Moviiies',
-            background: require('../../img/myheader.jpg'),
-            languages: [
-                {
-                    nom: 'Apple',
-                    icone: require('../../img/apple.png'),
+                    name: 'Apple',
+                    icon: require('../../img/apple.png'),
                 },
                 {
-                    nom: 'Swift',
-                    icone: require('../../img/swift.png'),
-                },
-            ]
-        },
-        {
-            nom: 'DigestiBox',
-            background: require('../../img/myheader.jpg'),
-            languages: [
-                {
-                    nom: 'Android',
-                    icone: require('../../img/android.png'),
-                },
-                {
-                    nom: 'Java',
-                    icone: require('../../img/java.png'),
+                    name: 'Swift',
+                    icon: require('../../img/swift.png'),
                 },
             ]
         },
     ]
 
     return (
-        <Box fill>
+        <Box flex direction="row-responsive">
             {
                 projects.map((project) => {
                     return (
-                        <Box flex="grow" key={project.nom} pad="small">
-                            <Text textAlign="center">{project.nom}</Text>
-
-                            <Box margin="none" direction="row">
-                                {
-                                    project.languages.map((language) => {
-                                        return (
-                                            <Box key={language.nom} fill pad="small" align="center">
-                                                <Image width="30%" height="30%" fit="contain" src={language.icone} />
-                                            </Box>
-                                        )
-                                    })
-                                }
-                            </Box>
-                        </Box>
+                        <Card align="center" margin="small" width="xlarge" flex key={project.name} pad="small">
+                            <Text textAlign="center">{project.name}</Text>
+                            <Image src={project.icon} fit="contain" />
+                            <Link to={"/" + project.name} onClick={() => localStorage.setItem('ProjectDetails', JSON.stringify(project))} >
+                                <StatusUnknown size="large" />
+                            </Link>
+                        </Card>
                     )
                 })
             }

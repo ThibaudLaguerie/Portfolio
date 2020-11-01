@@ -12,7 +12,8 @@ const Jobs = () => {
             secondaryColor: "#fff",
             tertiaryColor: "#0461ad",
             periode: "Depuis 2014",
-            poste: 'Fabrication et installation d\'abris de piscine',
+            poste: 'Monteur / Installeur',
+            tache: 'Fabrication et installation d\'abris de piscine',
             raison: "Entraide familiale"
         }, {
             nom: "McDonalds",
@@ -22,6 +23,7 @@ const Jobs = () => {
             tertiaryColor: "#FFC72C",
             periode: "Fin octobre 2017 - Fin décembre 2017",
             poste: 'Equipier cuisine',
+            tache: 'Préparation des burgers',
             raison: "Job étudiant"
         }, {
             nom: "IGE+XAO",
@@ -31,6 +33,7 @@ const Jobs = () => {
             tertiaryColor: "#4c76ba",
             periode: "Début avril 2019 - Fin juin 2019",
             poste: 'Développeur logiciel',
+            tache: 'Développement d\'améliorations du logiciel de gestion open-source ProjeQtor',
             raison: "Stage"
         }, {
             nom: "Tarn Habitat",
@@ -40,6 +43,7 @@ const Jobs = () => {
             tertiaryColor: "#297bc0",
             periode: "Depuis septembre 2019",
             poste: 'Développeur d\'applications mobiles',
+            tache: 'Développement d\'une application mobile cross-plateforme et d\'un espace web sécurisé à destination des locataires',
             raison: "Alternance"
         }
     ]
@@ -48,7 +52,7 @@ const Jobs = () => {
     return (
         <Box>
             {
-                jobs.reverse().map((job) => <Job job={job} />)
+                jobs.reverse().map((job) => <Job key={job.nom} job={job} />)
             }
         </Box >
     )

@@ -18,7 +18,7 @@ const Studies = () => {
                 <Box gridArea="left" fill>
                     <Card align="center" height="medium" >
                         <CardHeader>
-                            <Text>DUT Informatique</Text>
+                            <Text textAlign="center">DUT Informatique</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
@@ -34,9 +34,9 @@ const Studies = () => {
                                     thickness="small"
                                     type="circle"
                                 />
-                                <Text color="quaternary">Completed</Text>
+                                <Text textAlign="center" color="quaternary">Completed</Text>
                             </Box>
-                            <Text alignSelf="center">IUT de Blagnac (31)</Text>
+                            <Text textAlign="center" alignSelf="center">IUT de Blagnac (31)</Text>
                             <Box align="center">
                                 <Image src={require('../../img/Logo_IUT_Blagnac.png')} style={{ width: "50%" }} />
                             </Box>
@@ -46,7 +46,7 @@ const Studies = () => {
                 <Box gridArea="center" fill>
                     <Card align="center" height="medium">
                         <CardHeader>
-                            <Text>LP DReAM</Text>
+                            <Text textAlign="center">LP DReAM</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
@@ -62,9 +62,9 @@ const Studies = () => {
                                     thickness="small"
                                     type="circle"
                                 />
-                                <Text color="quaternary">Completed</Text>
+                                <Text textAlign="center" color="quaternary">Completed</Text>
                             </Box>
-                            <Text alignSelf="center">IUT de Castres (81)</Text>
+                            <Text alignSelf="center" textAlign="center">IUT de Castres (81)</Text>
                             <Box align="center">
                                 <Image src={require('../../img/lpdream.png')} style={{ width: "50%" }} />
                             </Box>
@@ -74,7 +74,7 @@ const Studies = () => {
                 <Box gridArea="right" fill>
                     <Card align="center" height="medium" >
                         <CardHeader>
-                            <Text>Mastère Ynov</Text>
+                            <Text textAlign="center">Mastère Ynov</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
@@ -90,9 +90,9 @@ const Studies = () => {
                                     thickness="small"
                                     type="circle"
                                 />
-                                <Text color="secondary">In progress</Text>
+                                <Text textAlign="center" color="secondary">In progress</Text>
                             </Box>
-                            <Text alignSelf="center">Ynov Campus de Toulouse (31)</Text>
+                            <Text textAlign="center" alignSelf="center">Ynov Campus de Toulouse (31)</Text>
                             <Box align="center">
                                 <Image src={require('../../img/ynov-masteres.svg')} style={{ objectFit: 'contain' }} />
                             </Box>
@@ -100,8 +100,8 @@ const Studies = () => {
                     </Card>
                 </Box>
             </Grid>
-            <Box fill align="center" justify="center" style={{ display: 'flex', flexDirection: 'row' }} >
-                <Text>Newbie</Text>
+            <Box fill align="center" justify="center" direction="row-responsive" >
+                <Text textAlign="center">Newbie</Text>
                 <Meter alignSelf="center" margin="medium"
                     values={[{
                         value: 2,
@@ -123,11 +123,11 @@ const Studies = () => {
                     },
                     ]}
                     max={5}
-                    size="large"
+                    size="medium"
                     thickness="small"
                     type="bar"
                 />
-                <Text>Expert en développement logiciel, mobile et IoT</Text>
+                <Text textAlign="center">Expert en développement logiciel, mobile et IoT</Text>
             </Box>
         </Box>
     )
