@@ -8,7 +8,7 @@ const Hobbies = () => {
                 <Box height="medium">
                     <Card fill align="center">
                         <CardHeader>
-                            <Text>Rugby</Text>
+                            <Text size="large">Rugby</Text>
                         </CardHeader>
                         <CardBody margin="medium">
                             <Image fit="contain" src={require('../../img/rugby.jpg')} />
@@ -18,7 +18,7 @@ const Hobbies = () => {
                 <Box height="medium">
                     <Card fill align="center">
                         <CardHeader >
-                            <Text alignSelf="center">Jeux vidéo</Text>
+                            <Text size="large">Jeux vidéo</Text>
                         </CardHeader>
                         <CardBody margin="medium">
                             <Image fit="contain" src={require('../../img/videogames.jpeg')} />
@@ -28,7 +28,7 @@ const Hobbies = () => {
                 <Box height="medium">
                     <Card fill align="center">
                         <CardHeader >
-                            <Text>Lecture</Text>
+                            <Text size="large">Lecture</Text>
                         </CardHeader>
                         <CardBody margin="medium">
                             <Image fit="contain" src={require('../../img/lecture.jpeg')} />
@@ -38,7 +38,7 @@ const Hobbies = () => {
                 <Box height="medium">
                     <Card fill align="center">
                         <CardHeader>
-                            <Text>Cinéma</Text>
+                            <Text size="large">Cinéma</Text>
                         </CardHeader>
                         <CardBody margin="medium">
                             <Image fit="contain" src={require('../../img/cinema.jpg')} />

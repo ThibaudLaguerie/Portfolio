@@ -1,4 +1,4 @@
-import { Nav } from 'grommet'
+import { Box, Nav, Text } from 'grommet'
 import { Home } from 'grommet-icons'
 import React from 'react'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
@@ -9,8 +9,11 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Nav direction="row" background="navbar" pad="xsmall">
-                <Link to="/">
-                    <Home size="large" color="#fff" />
+                <Link to="/" style={{ textDecoration: 'none'}}>
+                    <Box direction="row-responsive" align="center">
+                        <Home size="large" color="#fff" />
+                        <Text margin={{ horizontal: "medium"}} color="#fff" size="xxlarge">Thibaud Laguérie</Text>
+                    </Box>
                 </Link>
             </Nav>
             <Switch>

@@ -18,11 +18,12 @@ const Studies = () => {
                 <Box gridArea="left" fill>
                     <Card align="center" height="medium" >
                         <CardHeader>
-                            <Text textAlign="center">DUT Informatique</Text>
+                            <Text size="xlarge" textAlign="center">DUT Informatique</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
+                                    background="#e8e8e8"
                                     max={100}
                                     values={[{
                                         value: 100,
@@ -38,7 +39,7 @@ const Studies = () => {
                             </Box>
                             <Text textAlign="center" alignSelf="center">IUT de Blagnac (31)</Text>
                             <Box align="center">
-                                <Image src={require('../../img/Logo_IUT_Blagnac.png')} style={{ width: "50%" }} />
+                                <Image src={require('../../img/Logo_IUT_Blagnac.png')} width="50%" />
                             </Box>
                         </CardBody>
                     </Card>
@@ -46,11 +47,12 @@ const Studies = () => {
                 <Box gridArea="center" fill>
                     <Card align="center" height="medium">
                         <CardHeader>
-                            <Text textAlign="center">LP DReAM</Text>
+                            <Text size="xlarge" textAlign="center">LP DReAM</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
+                                    background="#e8e8e8"
                                     max={100}
                                     values={[{
                                         value: 100,
@@ -66,7 +68,7 @@ const Studies = () => {
                             </Box>
                             <Text alignSelf="center" textAlign="center">IUT de Castres (81)</Text>
                             <Box align="center">
-                                <Image src={require('../../img/lpdream.png')} style={{ width: "50%" }} />
+                                <Image src={require('../../img/lpdream.png')} width="50%" />
                             </Box>
                         </CardBody>
                     </Card>
@@ -74,11 +76,12 @@ const Studies = () => {
                 <Box gridArea="right" fill>
                     <Card align="center" height="medium" >
                         <CardHeader>
-                            <Text textAlign="center">Mastère Ynov</Text>
+                            <Text size="xlarge" textAlign="center">Mastère Ynov</Text>
                         </CardHeader>
                         <CardBody pad="xsmall" justify="around">
                             <Box alignSelf="center">
                                 <Meter
+                                    background="#e8e8e8"
                                     max={100}
                                     values={[{
                                         value: 1,
@@ -94,40 +97,44 @@ const Studies = () => {
                             </Box>
                             <Text textAlign="center" alignSelf="center">Ynov Campus de Toulouse (31)</Text>
                             <Box align="center">
-                                <Image src={require('../../img/ynov-masteres.svg')} style={{ objectFit: 'contain' }} />
+                                <Image src={require('../../img/ynov-masteres.svg')} width="50%" />
                             </Box>
                         </CardBody>
                     </Card>
                 </Box>
             </Grid>
-            <Box fill align="center" justify="center" direction="row-responsive" >
-                <Text textAlign="center">Newbie</Text>
-                <Meter alignSelf="center" margin="medium"
-                    values={[{
-                        value: 2,
-                        color: "brand",
-                        label: 'dut',
-                        onClick: () => { }
-                    },
-                    {
-                        value: 1,
-                        color: "secondary",
-                        label: 'lp',
-                        onClick: () => { }
-                    },
-                    {
-                        value: 0.1,
-                        color: "quaternary",
-                        label: 'ynov',
-                        onClick: () => { }
-                    },
-                    ]}
-                    max={5}
-                    size="medium"
-                    thickness="small"
-                    type="bar"
-                />
-                <Text textAlign="center">Expert en développement logiciel, mobile et IoT</Text>
+            <Box align="center" justify="center" direction="row-responsive" >
+                <Text size="large" textAlign="center">Newbie</Text>
+                <Box flex="grow">
+
+                    <Meter alignSelf="center" margin="medium"
+                        background="#e8e8e8"
+                        values={[{
+                            value: 2,
+                            color: "brand",
+                            label: 'dut',
+                            onClick: () => { }
+                        },
+                        {
+                            value: 1,
+                            color: "secondary",
+                            label: 'lp',
+                            onClick: () => { }
+                        },
+                        {
+                            value: 0.1,
+                            color: "quaternary",
+                            label: 'ynov',
+                            onClick: () => { }
+                        },
+                        ]}
+                        max={5}
+                        size="medium"
+                        thickness="small"
+                        type="bar"
+                    />
+                </Box>
+                <Text size="large" textAlign="center">Expert en développement logiciel, mobile et IoT</Text>
             </Box>
         </Box>
     )
